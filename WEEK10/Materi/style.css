@@ -1,0 +1,68 @@
+.navbar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+}
+
+h1{
+   color: blue;
+}
+
+.judul{
+   color:green;
+}
+
+#utama{
+   color:blue;
+}
+
+h1{
+   text-align:center;
+   font-size:40px;
+}
+
+.card{
+            border:1px solid gray;
+            padding:20px;
+            margin:10px;
+        }
+
+@media(max-width:768px){
+
+   body{
+       background-color:lightblue;
+   }
+
+}
+
+.container{
+   display:flex;
+}
+
+@media(max-width:768px){
+
+.container{
+   flex-direction:column;
+}
+
+}
+
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:20px;
+}
+
+@media(max-width:768px){
+    .grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+

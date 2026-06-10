@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Naja.dev</div>
+
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#portfolio">Project</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hamburger Icon -->
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</header>
+
+<section id="hero" class="hero reveal">
+    <div class="hero-content">
+        <h1>Hi, I'm Naja 👋</h1>
+        <p>Frontend Developer | UI Designer | Beginner Dev</p>
+        <a href="#portfolio" class="btn">View My Work</a>
+    </div>
+</section>
+
+<section id="portfolio" class="portfolio reveal">
+    <h2>My Projects</h2>
+
+    <div class="grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=600">
+            <h3>Landing Page</h3>
+            <p>Modern responsive landing page design.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600">
+            <h3>Dashboard UI</h3>
+            <p>Admin dashboard with clean UI layout.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600">
+            <h3>App UI</h3>
+            <p>Mobile application interface design.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600">
+            <h3>E-Commerce</h3>
+            <p>Online store UI concept design.</p>
+        </div>
+    </div>
+</section>
+
+<footer id="contact">
+    <p>© 2026 Naja Portfolio | Built with HTML & CSS</p>
+</footer>
+<script>
+const reveals = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", () => {
+    for (let el of reveals) {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+
+        if (elementTop < windowHeight - 100) {
+            el.classList.add("active");
+        }
+    }
+});
+
+</script>
+</body>
+</html>

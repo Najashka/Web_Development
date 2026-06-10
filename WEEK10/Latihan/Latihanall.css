@@ -1,0 +1,307 @@
+/* SMOOTH SCROLL */
+html{
+    scroll-behavior:smooth;
+}
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:#111;
+    color:white;
+}
+
+/* =======================
+   NAVBAR
+======================= */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    background:#111;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 5px 20px rgba(0,0,0,0.3);
+}
+
+.navbar .logo{
+    font-size:22px;
+    font-weight:700;
+    color:#d4af37;
+}
+
+.navbar .nav-links{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+.navbar .nav-links a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.navbar .nav-links a:hover{
+    color:#d4af37;
+}
+
+.navbar .btn{
+    padding:8px 20px;
+    border:none;
+    border-radius:20px;
+    background:#d4af37;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.navbar .btn:hover{
+    background:white;
+    transform:scale(1.05);
+}
+
+/* =======================
+   PROFILE
+======================= */
+.profile-wrapper{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:80px 20px;
+    scroll-margin-top:80px;
+}
+
+.profile-card{
+    width:350px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    transition:0.3s;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+.profile-card:hover{
+    transform:translateY(-10px);
+}
+
+.profile-card img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    border:3px solid #d4af37;
+    margin-bottom:15px;
+}
+
+.profile-card h1{
+    font-size:24px;
+    margin-bottom:5px;
+}
+
+.role{
+    color:#d4af37;
+    font-size:14px;
+    margin-bottom:10px;
+}
+
+.desc{
+    font-size:13px;
+    color:#ccc;
+    margin-bottom:20px;
+    line-height:20px;
+}
+
+.info{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:20px;
+}
+
+.info h3{
+    font-size:12px;
+    color:#aaa;
+}
+
+.info p{
+    font-size:14px;
+    font-weight:600;
+}
+
+/* SOCIAL */
+.social{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.icon{
+    width:42px;
+    height:42px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    background:rgba(255,255,255,0.1);
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.icon:hover{
+    transform:translateY(-5px) scale(1.1);
+}
+
+.facebook:hover{ background:#1877f2; }
+.instagram:hover{ background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7); }
+.twitter:hover{ background:#000; }
+.linkedin:hover{ background:#0a66c2; }
+
+/* BUTTON */
+button{
+    padding:10px 25px;
+    border:none;
+    border-radius:30px;
+    background:#d4af37;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:white;
+    transform:scale(1.05);
+}
+
+/* =======================
+   GALLERY
+======================= */
+.gallery-section{
+    padding:60px 8%;
+    scroll-margin-top:80px;
+}
+
+.gallery-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.gallery-container img{
+    width:100%;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.gallery-container img:hover{
+    transform:scale(1.05);
+    box-shadow:0 10px 20px rgba(212,175,55,0.4);
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media(max-width:768px){
+    .nav-links{
+        display:none;
+    }
+
+    .profile-card{
+        width:90%;
+    }
+
+    .gallery-container{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:480px){
+    .gallery-container{
+        grid-template-columns:1fr;
+    }
+}
+
+/* =======================
+   RESPONSIVE DESIGN
+======================= */
+
+/* Tablet */
+@media (max-width: 768px){
+
+    /* NAVBAR */
+    .navbar{
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 5%;
+    }
+
+    .nav-links{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* PROFILE */
+    .profile-card{
+        width: 90%;
+        padding: 25px;
+    }
+
+    .info{
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    /* GALLERY */
+    .gallery-container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
+/* HP / Mobile */
+@media (max-width: 480px){
+
+    /* NAVBAR */
+    .navbar{
+        padding: 15px;
+    }
+
+    .navbar .logo{
+        font-size: 18px;
+    }
+
+    .navbar .btn{
+        padding: 6px 15px;
+        font-size: 12px;
+    }
+
+    /* PROFILE */
+    .profile-card{
+        width: 95%;
+    }
+
+    .profile-card h1{
+        font-size: 20px;
+    }
+
+    .desc{
+        font-size: 12px;
+    }
+
+    /* GALLERY */
+    .gallery-container{
+        grid-template-columns: 1fr;
+    }
+}
