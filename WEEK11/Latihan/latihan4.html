@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Latihan 4</title>
+</head>
+<body>
+
+<input type="text" id="nama">
+
+<button onclick="validasi()">
+Kirim
+</button>
+
+<script>
+function validasi(){
+
+let nama =
+document.getElementById("nama").value;
+
+if(nama == ""){
+    alert("Nama wajib diisi");
+}
+else{
+    alert("Data berhasil dikirim");
+}
+
+}
+</script>
+
+</body>
+</html>
