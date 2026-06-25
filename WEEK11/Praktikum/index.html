@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sistem Data Mahasiswa</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <h1>
+        Sistem Data Mahasiswa
+    </h1>
+
+
+    <label>
+        Nama Mahasiswa
+    </label>
+
+    <input 
+    type="text" 
+    id="nama"
+    placeholder="Masukkan nama">
+
+
+    <label>
+        Nilai Mahasiswa
+    </label>
+
+    <input 
+    type="number" 
+    id="nilai"
+    placeholder="Masukkan nilai">
+
+
+
+    <div class="button">
+
+        <button onclick="simpanData()">
+            Simpan
+        </button>
+
+
+        <button onclick="tampilkanData()">
+            Tampilkan
+        </button>
+
+    </div>
+
+
+
+    <h2>
+        Data Mahasiswa
+    </h2>
+
+
+    <table>
+
+
+        <thead>
+
+            <tr>
+
+                <th>No</th>
+
+                <th>Nama</th>
+
+                <th>Nilai</th>
+
+            </tr>
+
+
+        </thead>
+
+
+
+        <tbody id="tabelData">
+
+
+        </tbody>
+
+
+
+    </table>
+
+
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
