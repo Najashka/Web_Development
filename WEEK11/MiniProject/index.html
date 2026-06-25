@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Biodata Mahasiswa</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>
+            Aplikasi Biodata Mahasiswa
+        </h1>
+
+
+        <label>
+            Nama Mahasiswa
+        </label>
+
+        <input 
+        type="text" 
+        id="nama"
+        placeholder="Masukkan nama">
+
+
+        <label>
+            NIM Mahasiswa
+        </label>
+
+        <input 
+        type="number" 
+        id="nim"
+        placeholder="Masukkan NIM">
+
+
+        <button onclick="tampilkanBiodata()">
+            Tampilkan
+        </button>
+
+
+        <div class="hasil">
+
+            <h2>
+                Data Mahasiswa
+            </h2>
+
+            <p id="hasilNama"></p>
+
+            <p id="hasilNim"></p>
+
+        </div>
+
+
+    </div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
