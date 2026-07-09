@@ -65,7 +65,7 @@ const server = http.createServer((req, res) => {
         res.end(`
             <h1>Kontak</h1>
 
-            <p>Email : kampus@email.com</p>
+            <p>Email : kampusunipi@email.com</p>
 
             <p>Telepon : 021-12345678</p>
         `);
