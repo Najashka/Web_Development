@@ -1,36 +1,164 @@
 import StudentModel from "../models/studentModel.js";
 
-const StudentController = {
+const StudentController={
 
-    async getAll(req, res) {
+async getAll(req,res){
 
-        try {
+    try{
 
-            const students = await StudentModel.getAll();
+        const students=await StudentModel.getAll();
 
-            res.status(200).json({
+        res.json({
 
-                success: true,
+            success:true,
 
-                total: students.length,
+            data:students
 
-                data: students
+        });
 
-            });
+    }catch(error){
 
-        } catch (error) {
+        res.status(500).json({
 
-            res.status(500).json({
+            success:false,
 
-                success: false,
+            message:error.message
 
-                message: error.message
+        });
+
+    }
+
+},
+
+async getById(req,res){
+
+    try{
+
+        const student=await StudentModel.getById(req.params.id);
+
+        if(!student){
+
+            return res.status(404).json({
+
+                success:false,
+
+                message:"Data tidak ditemukan"
 
             });
 
         }
 
+        res.json({
+
+            success:true,
+
+            data:student
+
+        });
+
+    }catch(error){
+
+        res.status(500).json({
+
+            success:false,
+
+            message:error.message
+
+        });
+
     }
+
+},
+
+async create(req,res){
+
+    try{
+
+        await StudentModel.create(req.body);
+
+        res.status(201).json({
+
+            success:true,
+
+            message:"Data berhasil ditambahkan"
+
+        });
+
+    }catch(error){
+
+        res.status(500).json({
+
+            success:false,
+
+            message:error.message
+
+        });
+
+    }
+
+},
+
+async update(req,res){
+
+    try{
+
+        await StudentModel.update(
+
+            req.params.id,
+
+            req.body
+
+        );
+
+        res.json({
+
+            success:true,
+
+            message:"Data berhasil diubah"
+
+        });
+
+    }catch(error){
+
+        res.status(500).json({
+
+            success:false,
+
+            message:error.message
+
+        });
+
+    }
+
+},
+
+async delete(req,res){
+
+    try{
+
+        await StudentModel.delete(req.params.id);
+
+        res.json({
+
+            success:true,
+
+            message:"Data berhasil dihapus"
+
+        });
+
+    }catch(error){
+
+        res.status(500).json({
+
+            success:false,
+
+            message:error.message
+
+        });
+
+    }
+
+}
 
 };
 
